@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Meu Trabalho" />
+  <title>O Meu Trabalho</title>
+    <style>:root{--bg:#07101d;--panel:#111c2d;--panel2:#16243a;--text:#f4f7fb;--muted:#9eabc0;--accent:#2f7ff7;--green:#24b36b;--red:#ef5350;--line:#263650;--amber:#ffb020}*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif}body{min-height:100vh;padding-bottom:88px}.topbar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top)) 18px 12px;background:linear-gradient(180deg,#0b1423 80%,rgba(11,20,35,.94));border-bottom:1px solid var(--line)}h1,h2,h3,p{margin:0}.topbar h1{font-size:22px}.topbar p,.sectionHead p,.dialogHead p{color:var(--muted);font-size:13px;margin-top:3px}main{max-width:980px;margin:auto;padding:14px}.view{display:none}.view.active{display:block}.toolbar{display:flex;align-items:center;justify-content:space-between;margin:5px 0 14px}.monthTitle{font-size:22px;font-weight:800;text-transform:capitalize}.iconBtn{border:0;background:var(--panel2);color:var(--text);width:42px;height:42px;border-radius:50%;font-size:26px}.statsGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}.stat{background:var(--panel);border:1px solid var(--line);padding:13px;border-radius:16px}.stat b{font-size:21px;display:block;margin-top:4px}.stat small{color:var(--muted)}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.weekday{text-align:center;color:var(--muted);font-size:12px;padding:5px}.day{min-height:76px;border:1px solid var(--line);background:var(--panel);border-radius:13px;padding:8px;position:relative;cursor:pointer}.day.other{opacity:.35}.day.today{outline:2px solid var(--accent)}.day .n{font-weight:800}.day .meta{font-size:10px;color:var(--muted);margin-top:7px;line-height:1.25}.day.worked{background:linear-gradient(180deg,#132b44,var(--panel))}.day.off{background:linear-gradient(180deg,#1a2330,var(--panel))}.day.vacation{background:linear-gradient(180deg,#2a2450,var(--panel))}.day .tipDot{position:absolute;right:7px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--green)}.sectionHead{display:flex;align-items:flex-end;justify-content:space-between;margin:6px 0 14px}.sectionHead h2{font-size:24px}.sectionHead select,select,input{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:11px;padding:11px;font-size:16px;width:100%}.sectionHead select{width:auto}.tableWrap{overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:15px}.tableWrap table{width:100%;border-collapse:collapse;min-width:760px}.tableWrap th,.tableWrap td{padding:10px 11px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);font-size:13px;text-align:right;white-space:nowrap}.tableWrap th:first-child,.tableWrap td:first-child{text-align:left;position:sticky;left:0;background:var(--panel);z-index:1}.tableWrap thead th{background:#19263a;color:#d8e3f2}.tableWrap tr:last-child td{font-weight:800}.segmented{display:flex;gap:7px;overflow:auto;margin-bottom:12px}.segmented button{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 13px;border-radius:12px;white-space:nowrap}.segmented button.active{background:var(--accent);border-color:var(--accent)}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px;margin-bottom:12px}.formCard h3{margin-bottom:12px}.formCard label,dialog label{display:block;color:#dbe4f2;font-size:13px;margin:11px 0}.formCard input,.formCard select,dialog input,dialog select{margin-top:6px}.hint{color:var(--muted);font-size:12px;line-height:1.45;margin-top:7px}.buttonRow{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}button,.fileButton{font:inherit}.buttonRow button,.fileButton,.primary{border:0;background:var(--accent);color:white;padding:12px 15px;border-radius:12px;font-weight:700}.fileButton input{display:none}.ghost{background:transparent!important;border:1px solid var(--line)!important;color:var(--text)!important}.danger{background:var(--red)!important}.full{width:100%;border:0}.bottomNav{position:fixed;z-index:10;left:0;right:0;bottom:0;padding:8px 8px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(4,1fr);background:rgba(9,17,29,.96);backdrop-filter:blur(18px);border-top:1px solid var(--line)}.bottomNav button{background:transparent;border:0;color:var(--muted);font-size:11px;padding:5px}.bottomNav button span{display:block;font-size:20px;margin-bottom:2px}.bottomNav button.active{color:white}.bottomNav button.active span{filter:saturate(1.3)}dialog{width:min(620px,calc(100% - 18px));border:1px solid var(--line);border-radius:20px;background:#0d1727;color:var(--text);padding:16px}dialog::backdrop{background:rgba(0,0,0,.65);backdrop-filter:blur(4px)}.dialogHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.preview{background:#0a2235;border:1px solid #1b496c;border-radius:12px;padding:11px;line-height:1.5;font-size:13px;margin-top:10px}.hidden{display:none!important}@media(min-width:720px){.statsGrid{grid-template-columns:repeat(4,1fr)}.calendar{gap:9px}.day{min-height:105px}.day .meta{font-size:12px}}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>O Meu Trabalho</h1>
+      <p>Horas, rendimentos e gorjetas</p>
+    </div>
+    <button id="installBtn" class="ghost hidden">Adicionar</button>
+  </header>
+
+  <main>
+    <section id="view-calendar" class="view active">
+      <div class="toolbar">
+        <button id="prevMonth" class="iconBtn">‹</button>
+        <div class="monthTitle" id="monthTitle"></div>
+        <button id="nextMonth" class="iconBtn">›</button>
+      </div>
+      <div id="monthStats" class="statsGrid"></div>
+      <div id="calendar" class="calendar"></div>
+    </section>
+
+    <section id="view-summary" class="view">
+      <div class="sectionHead">
+        <div><h2>Resumo</h2><p>Ordenado, gorjetas e total real.</p></div>
+        <select id="summaryYear"></select>
+      </div>
+      <div id="summaryCards" class="statsGrid"></div>
+      <div class="tableWrap"><table id="summaryTable"></table></div>
+    </section>
+
+    <section id="view-income" class="view">
+      <div class="sectionHead"><div><h2>Rendimentos</h2><p>Todos os anos e meses numa só área.</p></div></div>
+      <div class="segmented" id="incomeTabs">
+        <button data-mode="all" class="active">Tudo</button>
+        <button data-mode="salary">Ordenado</button>
+        <button data-mode="tips">Gorjetas</button>
+        <button data-mode="beach">Praia</button>
+        <button data-mode="net">Total líquido</button>
+      </div>
+      <div class="tableWrap"><table id="incomeTable"></table></div>
+    </section>
+
+    <section id="view-settings" class="view">
+      <div class="sectionHead"><div><h2>Definições</h2><p>Todos os valores continuam editáveis.</p></div></div>
+      <div class="card formCard">
+        <h3>Valores base por época</h3>
+        <div id="seasonSettings"></div>
+      </div>
+      <div class="card formCard">
+        <h3>Valores variáveis</h3>
+        <label>Valor da folga trabalhada (€)<input id="dayOffRate" inputmode="decimal" type="number" step="0.01"></label>
+        <p class="hint">Histórico atual: 70 € por folga trabalhada. Podes alterar quando houver aumento.</p>
+        <div id="extraRateSettings"></div>
+      </div>
+      <div class="card formCard">
+        <h3>Fecho do ordenado</h3>
+        <label>Regra sugerida
+          <select id="closingRule"><option value="last">Último domingo do mês</option><option value="previous">Domingo anterior</option></select>
+        </label>
+        <p class="hint">Podes corrigir o domingo de fecho individualmente em cada mês.</p>
+      </div>
+      <div class="card formCard">
+        <h3>Segurança dos dados</h3>
+        <div class="buttonRow">
+          <button id="exportBtn">Exportar cópia</button>
+          <label class="fileButton">Importar cópia<input id="importInput" type="file" accept="application/json"></label>
+        </div>
+        <button id="resetBtn" class="danger ghost">Repor dados iniciais</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottomNav">
+    <button data-view="calendar" class="active"><span>📅</span>Calendário</button>
+    <button data-view="summary"><span>📊</span>Resumo</button>
+    <button data-view="income"><span>💶</span>Rendimentos</button>
+    <button data-view="settings"><span>⚙️</span>Definições</button>
+  </nav>
+
+  <dialog id="dayDialog">
+    <form method="dialog" id="dayForm">
+      <div class="dialogHead"><div><h3 id="dialogDate"></h3><p id="dialogSeason"></p></div><button value="cancel" class="iconBtn">×</button></div>
+      <label>Tipo de dia
+        <select id="dayType">
+          <option value="work">Trabalho</option><option value="off">Folga</option><option value="vacation">Férias</option><option value="worked_off">Folga trabalhada</option><option value="other">Outro</option>
+        </select>
+      </label>
+      <div class="twoCol"><label>Entrada<input id="startTime" type="time"></label><label>Saída<input id="endTime" type="time"></label></div>
+      <label>Almoço<select id="lunchType"><option value="land">🍴 Em terra (-1h)</option><option value="none">🚢 A bordo / sem almoço</option></select></label>
+      <div class="twoCol"><label>Gorjetas (€)<input id="tips" type="number" inputmode="decimal" step="0.01"></label><label>Dadas à praia (€)<input id="beachTips" type="number" inputmode="decimal" step="0.01"></label></div>
+      <label>Pagamento extra à parte (€)<input id="separatePay" type="number" inputmode="decimal" step="0.01"></label>
+      <label>Nota<input id="note" type="text" placeholder="Ex.: reunião, combustível, evento..."></label>
+      <div id="calcPreview" class="preview"></div>
+      <div class="buttonRow"><button id="saveDay" value="default" class="primary">Guardar</button><button id="deleteDay" value="default" class="danger">Apagar</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="monthDialog">
+    <form method="dialog" id="monthForm">
+      <div class="dialogHead"><div><h3 id="monthDialogTitle"></h3><p>Valores finais do mês</p></div><button value="cancel" class="iconBtn">×</button></div>
+      <label>Ordenado final recebido (€)<input id="monthSalary" type="number" step="0.01"></label>
+      <label>Domingo de fecho<input id="monthCloseDate" type="date"></label>
+      <button id="saveMonth" value="default" class="primary full">Guardar mês</button>
+    </form>
+  </dialog>
+
+  <script>const MONTHS=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const WEEK=['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
+const euro=n=>new Intl.NumberFormat('pt-PT',{style:'currency',currency:'EUR',maximumFractionDigits:2}).format(Number(n||0));
+const pad=n=>String(n).padStart(2,'0');
+const keyDate=(y,m,d)=>`${y}-${pad(m+1)}-${pad(d)}`;
+const monthKey=(y,m)=>`${y}-${pad(m+1)}`;
+const minutes=t=>{if(!t)return null;const [h,m]=t.split(':').map(Number);return h*60+m};
+
+const HISTORICAL_DAYS={};
+const initial={
+ version:1,
+ settings:{dayOffRate:70,closingRule:'last',seasonBase:{},extraRates:[{from:'2024-01-01',to:null,rate:0}]},
+ monthly:{},
+ days:HISTORICAL_DAYS
+};
+
+let state=load();let cursor=new Date(2026,9,1);let currentDay=null;let incomeMode='all';
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function load(){try{return JSON.parse(localStorage.getItem('meuTrabalhoData'))||clone(initial)}catch{return clone(initial)}}
+function save(){localStorage.setItem('meuTrabalhoData',JSON.stringify(state))}
+function seasonFor(dateStr){const [y,m]=dateStr.split('-').map(Number);return m>=4&&m<=10?`Verão ${y} ☀️`:`Inverno ${m>=11?y:y-1}/${String(m>=11?y+1:y).slice(-2)} ❄️`}
+function extraRate(dateStr){return [...state.settings.extraRates].reverse().find(r=>dateStr>=r.from&&(!r.to||dateStr<=r.to))?.rate||0}
+function workedMinutes(rec){if(!rec||!rec.start||!rec.end)return 0;let a=minutes(rec.start),b=minutes(rec.end);if(b<a)b+=1440;let total=b-a;if(rec.lunch==='land')total-=60;total+=Number(rec.additionalMinutes||0);return Math.max(0,total)}
+function extraMinutes(rec){return Math.max(0,workedMinutes(rec)-480)+Number(rec.paidAdjustmentMinutes||0)}
+function fmtMin(n){const h=Math.floor(n/60),m=n%60;return `${h}h${m?` ${m}m`:''}`}
+function summarizeRecords(entries){let tips=0,beach=0,separate=0,extraM=0,workedOff=0,workM=0;entries.forEach(([,r])=>{tips+=Number(r.tips||0);beach+=Number(r.beachTips||0);separate+=Number(r.separatePay||0);workM+=workedMinutes(r);extraM+=extraMinutes(r);if(r.type==='worked_off')workedOff++});return {tips,beach,separate,extraM,workedOff,workM}}
+function getCalendarMonthData(y,m){const mk=monthKey(y,m);return summarizeRecords(Object.entries(state.days).filter(([d])=>d.startsWith(mk)))}
+function payrollRange(y,m){const mk=monthKey(y,m), cur=state.monthly[mk]||{};const end=cur.closeDate||suggestClose(y,m);let py=y,pm=m-1;if(pm<0){pm=11;py--}const pmk=monthKey(py,pm),prev=state.monthly[pmk]||{};const prevEnd=prev.closeDate||suggestClose(py,pm);const st=new Date(`${prevEnd}T12:00:00`);st.setDate(st.getDate()+1);const start=`${st.getFullYear()}-${pad(st.getMonth()+1)}-${pad(st.getDate())}`;return {start,end}}
+function getPayrollData(y,m){const range=payrollRange(y,m);const entries=Object.entries(state.days).filter(([d])=>d>=range.start&&d<=range.end);return {...summarizeRecords(entries),...range}}
+function baseSalaryFor(y,m){if(m>=3&&m<=9)return Number(state.settings.seasonBase[`${y}-summer`]||0);if(y===2026&&m>=10)return Number(state.settings.seasonBase['2026-winter']||0);if(y===2027&&m<=2)return Number(state.settings.seasonBase['2026-winter']||0);return 0}
+function calcMonth(y,m){const mk=monthKey(y,m),manual=state.monthly[mk]||{},p=getPayrollData(y,m),date=`${y}-${pad(m+1)}-01`,summer=m>=3&&m<=9;const tips=manual.tips??p.tips,beach=manual.beach??p.beach;const extrasPay=summer?(p.extraM/60)*extraRate(date):0;const offsPay=summer?p.workedOff*Number(state.settings.dayOffRate||0):0;const baseSalary=baseSalaryFor(y,m);const estimatedSalary=baseSalary+extrasPay+offsPay;const salary=manual.salary??null;const netTips=tips-beach;const actualSalary=salary==null?0:Number(salary);return {...p,salary,tips,beach,closeDate:manual.closeDate||p.end,extrasPay,offsPay,baseSalary,estimatedSalary,netTips,totalNet:actualSalary+netTips+p.separate,totalEstimated:estimatedSalary+netTips+p.separate}}
+function setView(v){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===`view-${v}`));document.querySelectorAll('.bottomNav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));if(v==='summary')renderSummary();if(v==='income')renderIncome();if(v==='settings')renderSettings()}
+document.querySelectorAll('.bottomNav button').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+
+function renderCalendar(){const y=cursor.getFullYear(),m=cursor.getMonth();document.getElementById('monthTitle').textContent=`${MONTHS[m]} ${y}`;const c=document.getElementById('calendar');c.innerHTML=WEEK.map(w=>`<div class="weekday">${w}</div>`).join('');const first=new Date(y,m,1);let offset=(first.getDay()+6)%7;const days=new Date(y,m+1,0).getDate();const prevDays=new Date(y,m,0).getDate();for(let i=0;i<42;i++){let d,mm=m,yy=y,other=false;if(i<offset){d=prevDays-offset+i+1;mm=m-1;other=true;if(mm<0){mm=11;yy--}}else if(i>=offset+days){d=i-offset-days+1;mm=m+1;other=true;if(mm>11){mm=0;yy++}}else d=i-offset+1;const k=keyDate(yy,mm,d),r=state.days[k];const today=new Date(),isToday=today.getFullYear()===yy&&today.getMonth()===mm&&today.getDate()===d;let cls='day'+(other?' other':'')+(isToday?' today':'');if(r)cls+=r.type==='vacation'?' vacation':(r.type==='off'?' off':' worked');const meta=r?`${r.type==='off'?'Folga':r.type==='vacation'?'Férias':r.start&&r.end?`${r.start}–${r.end}`:'Registo'}${r.tips?`<br>${euro(r.tips)}`:''}`:'';c.insertAdjacentHTML('beforeend',`<button class="${cls}" data-date="${k}"><span class="n">${d}</span>${r?.tips?'<span class="tipDot"></span>':''}<div class="meta">${meta}</div></button>`)}c.querySelectorAll('.day').forEach(b=>b.onclick=()=>openDay(b.dataset.date));renderMonthStats()}
+function renderMonthStats(){const y=cursor.getFullYear(),m=cursor.getMonth(),cal=getCalendarMonthData(y,m),d=calcMonth(y,m);const salaryLabel=d.salary==null?'Salário estimado':'Ordenado final';const salaryValue=d.salary==null?d.estimatedSalary:d.salary;document.getElementById('monthStats').innerHTML=[['Horas',fmtMin(cal.workM)],['Horas extra',fmtMin(cal.extraM)],['Gorjetas',euro(d.tips)],[salaryLabel,euro(salaryValue)]].map(([a,b])=>`<div class="stat"><small>${a}</small><b>${b}</b></div>`).join('')}
+document.getElementById('prevMonth').onclick=()=>{cursor=new Date(cursor.getFullYear(),cursor.getMonth()-1,1);renderCalendar()};document.getElementById('nextMonth').onclick=()=>{cursor=new Date(cursor.getFullYear(),cursor.getMonth()+1,1);renderCalendar()};
+function openDay(k){currentDay=k;const r=state.days[k]||{type:'work',lunch:'land',tips:0,beachTips:0,separatePay:0};const dt=new Date(`${k}T12:00:00`);document.getElementById('dialogDate').textContent=new Intl.DateTimeFormat('pt-PT',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(dt);document.getElementById('dialogSeason').textContent=seasonFor(k);['dayType','startTime','endTime','lunchType','tips','beachTips','separatePay','note'].forEach(id=>{const map={dayType:'type',startTime:'start',endTime:'end',lunchType:'lunch'};document.getElementById(id).value=r[map[id]||id]??''});updatePreview();document.getElementById('dayDialog').showModal()}
+function updatePreview(){const r={start:startTime.value,end:endTime.value,lunch:lunchType.value};const w=workedMinutes(r),e=extraMinutes(r),rate=extraRate(currentDay||'2026-01-01');calcPreview.innerHTML=`Horas trabalhadas: <b>${fmtMin(w)}</b><br>Horas extra: <b>${fmtMin(e)}</b> × ${euro(rate)}/h<br>Gorjetas líquidas: <b>${euro(Number(tips.value||0)-Number(beachTips.value||0))}</b>`}
+['startTime','endTime','lunchType','tips','beachTips'].forEach(id=>document.getElementById(id).addEventListener('input',updatePreview));
+document.getElementById('saveDay').onclick=e=>{e.preventDefault();state.days[currentDay]={...(state.days[currentDay]||{}),type:dayType.value,start:startTime.value,end:endTime.value,lunch:lunchType.value,tips:Number(tips.value||0),beachTips:Number(beachTips.value||0),separatePay:Number(separatePay.value||0),note:note.value};save();dayDialog.close();renderCalendar()};document.getElementById('deleteDay').onclick=e=>{e.preventDefault();if(confirm('Apagar este registo?')){delete state.days[currentDay];save();dayDialog.close();renderCalendar()}};
+
+function availableYears(){const ys=new Set([2023,2024,2025,2026,2027]);Object.keys(state.monthly).forEach(k=>ys.add(Number(k.slice(0,4))));Object.keys(state.days).forEach(k=>ys.add(Number(k.slice(0,4))));return [...ys].filter(y=>y>=2024).sort((a,b)=>a-b)}
+function renderSummary(){const s=document.getElementById('summaryYear');if(!s.options.length)s.innerHTML=availableYears().map(y=>`<option>${y}</option>`).join('');if(!s.value)s.value='2026';const y=Number(s.value);let sums={salary:0,tips:0,beach:0,net:0};let rows=MONTHS.map((mo,m)=>{const d=calcMonth(y,m);sums.salary+=Number(d.salary||0);sums.tips+=d.tips;sums.beach+=d.beach;sums.net+=d.totalNet;return `<tr><td>${mo}</td><td>${d.salary==null?`<span title="Estimativa">~ ${euro(d.estimatedSalary)}</span>`:euro(d.salary)}</td><td>${euro(d.tips)}</td><td>${euro(d.beach)}</td><td>${euro(d.netTips)}</td><td>${euro(d.totalNet)}</td><td><button class="editMonth" data-m="${m}">Editar</button></td></tr>`}).join('');summaryCards.innerHTML=[['Ordenado',euro(sums.salary)],['Gorjetas',euro(sums.tips)],['Praia',euro(sums.beach)],['Total líquido',euro(sums.net)]].map(([a,b])=>`<div class="stat"><small>${a}</small><b>${b}</b></div>`).join('');summaryTable.innerHTML=`<thead><tr><th>Mês</th><th>Ordenado</th><th>Gorjetas</th><th>Praia</th><th>Gorjetas líquidas</th><th>Total líquido</th><th></th></tr></thead><tbody>${rows}<tr><td>TOTAL</td><td>${euro(sums.salary)}</td><td>${euro(sums.tips)}</td><td>${euro(sums.beach)}</td><td>${euro(sums.tips-sums.beach)}</td><td>${euro(sums.net)}</td><td></td></tr></tbody>`;document.querySelectorAll('.editMonth').forEach(b=>b.onclick=()=>openMonth(y,Number(b.dataset.m)))}
+summaryYear.onchange=renderSummary;
+function openMonth(y,m){const mk=monthKey(y,m),d=state.monthly[mk]||{};monthDialogTitle.textContent=`${MONTHS[m]} ${y}`;monthSalary.value=d.salary??'';monthCloseDate.value=d.closeDate||suggestClose(y,m);monthDialog.dataset.mk=mk;monthDialog.showModal()}
+function suggestClose(y,m){const last=new Date(y,m+1,0);while(last.getDay()!==0)last.setDate(last.getDate()-1);if(state.settings.closingRule==='previous')last.setDate(last.getDate()-7);return `${last.getFullYear()}-${pad(last.getMonth()+1)}-${pad(last.getDate())}`}
+saveMonth.onclick=e=>{e.preventDefault();const mk=monthDialog.dataset.mk;state.monthly[mk]=state.monthly[mk]||{};state.monthly[mk].salary=monthSalary.value===''?null:Number(monthSalary.value);state.monthly[mk].closeDate=monthCloseDate.value;save();monthDialog.close();renderSummary();renderIncome()};
+
+function renderIncome(){const ys=availableYears();let html=`<thead><tr><th>Mês</th>${ys.map(y=>`<th>${y}</th>`).join('')}</tr></thead><tbody>`;MONTHS.forEach((mo,m)=>{html+=`<tr><td>${mo}</td>`+ys.map(y=>{const d=calcMonth(y,m);let v;if(incomeMode==='salary')v=d.salary==null?'—':euro(d.salary);else if(incomeMode==='tips')v=euro(d.tips);else if(incomeMode==='beach')v=euro(d.beach);else if(incomeMode==='net')v=euro(d.totalNet);else v=`<div><b>${euro(d.totalNet)}</b><small style="display:block;color:#9eabc0">${euro(d.salary)} + ${euro(d.netTips)}</small></div>`;return `<td>${v}</td>`}).join('')+`</tr>`});html+=`<tr><td>TOTAL</td>`+ys.map(y=>{let total=0;for(let m=0;m<12;m++){const d=calcMonth(y,m);total+=incomeMode==='salary'?Number(d.salary||0):incomeMode==='tips'?d.tips:incomeMode==='beach'?d.beach:d.totalNet}return `<td>${euro(total)}</td>`}).join('')+`</tr></tbody>`;incomeTable.innerHTML=html}
+document.querySelectorAll('#incomeTabs button').forEach(b=>b.onclick=()=>{incomeMode=b.dataset.mode;document.querySelectorAll('#incomeTabs button').forEach(x=>x.classList.toggle('active',x===b));renderIncome()});
+
+function renderSettings(){dayOffRate.value=state.settings.dayOffRate;closingRule.value=state.settings.closingRule;seasonSettings.innerHTML=[['Verão 2024','2024-summer'],['Verão 2025','2025-summer'],['Verão 2026','2026-summer'],['Inverno 2026/27','2026-winter']].map(([label,k])=>`<label>${label} — ordenado base (€)<input data-season="${k}" type="number" step="0.01" value="${state.settings.seasonBase[k]??''}"></label>`).join('');extraRateSettings.innerHTML=`<h3 style="margin-top:18px">Hora extra</h3>${state.settings.extraRates.map((r,i)=>`<div class="twoCol"><label>Desde<input data-er-from="${i}" type="date" value="${r.from}"></label><label>Valor €/h<input data-er-rate="${i}" type="number" step="0.01" value="${r.rate}"></label></div>`).join('')}`;document.querySelectorAll('[data-season]').forEach(i=>i.onchange=()=>{state.settings.seasonBase[i.dataset.season]=Number(i.value||0);save()});document.querySelectorAll('[data-er-rate]').forEach(i=>i.onchange=()=>{state.settings.extraRates[Number(i.dataset.erRate)].rate=Number(i.value||0);save();renderCalendar()});document.querySelectorAll('[data-er-from]').forEach(i=>i.onchange=()=>{state.settings.extraRates[Number(i.dataset.erFrom)].from=i.value;save()})}
+dayOffRate.onchange=()=>{state.settings.dayOffRate=Number(dayOffRate.value||0);save()};closingRule.onchange=()=>{state.settings.closingRule=closingRule.value;save()};
+exportBtn.onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`meu-trabalho-backup-${new Date().toISOString().slice(0,10)}.json`;a.click();URL.revokeObjectURL(a.href)};
+importInput.onchange=async()=>{const f=importInput.files[0];if(!f)return;try{const d=JSON.parse(await f.text());state=d;save();alert('Cópia importada.');renderCalendar();renderSummary();renderIncome();renderSettings()}catch{alert('Não foi possível importar este ficheiro.')}};
+resetBtn.onclick=()=>{if(confirm('Repor os dados iniciais? Isto substitui os dados guardados neste dispositivo.')){state=clone(initial);save();renderCalendar();renderSettings()}};
+
+let installPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBtn.classList.remove('hidden')});installBtn.onclick=async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBtn.classList.add('hidden')}};
+
+renderCalendar();
+</script>
+</body>
+</html>
